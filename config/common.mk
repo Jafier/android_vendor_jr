@@ -115,24 +115,24 @@ PRODUCT_COPY_FILES += \
 
 # This is JR!
 PRODUCT_COPY_FILES += \
-    vendor/jr/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    vendor/jr/config/permissions/com.jafierrom.android.xml:system/etc/permissions/com.jafierrom.android.xml
 
 # T-Mobile theme engine
 include vendor/jr/config/themes_common.mk
 
-# Required CM packages
+# Required JR packages
 PRODUCT_PACKAGES += \
     Development \
     LatinIME \
     BluetoothExt
 
-# Optional CM packages
+# Optional JR packages
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
     libemoji
 
-# Custom CM packages
+# Custom JR packages
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
@@ -220,7 +220,7 @@ PRODUCT_VERSION_MAINTENANCE = 0-RC0
 
 ifndef JR_BUILDTYPE
     ifdef RELEASE_TYPE
-        # Starting with "CM_" is optional
+        # Starting with "JR_" is optional
         RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^JR_||g')
         JR_BUILDTYPE := $(RELEASE_TYPE)
     endif
