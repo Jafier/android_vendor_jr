@@ -1,7 +1,7 @@
 # Inherit common JR stuff
 $(call inherit-product, vendor/jr/config/common.mk)
 
-# Include CM audio files
+# Include JR audio files
 include vendor/jr/config/jr_audio.mk
 
 # Default notification/alarm sounds
